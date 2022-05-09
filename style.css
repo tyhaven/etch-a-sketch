@@ -28,5 +28,10 @@ input {
 }
 
 .gridItem {
-    border: 1px solid black;
+    border: 1px solid gray;
 }
+
+/* .gridItem:hover {
+    background-color: gray;
+    border: white;
+} */
