@@ -28,10 +28,15 @@ input {
 }
 
 .gridItem {
-    border: 1px solid gray;
+    ;
 }
 
 .gridItem:hover {
-    background-color: gray;
-    border: white;
+    background-color: rgb(235, 235, 235);
+    border: gray;
+    
+}
+
+.colored {
+    background-color: aquamarine;
 }
