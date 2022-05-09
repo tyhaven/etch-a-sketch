@@ -1,6 +1,10 @@
 let container = document.querySelector('.gridContainer')
-let input = document.querySelector('input')
+let input = document.getElementById('selection')
 let button = document.getElementById('myBtn')
+
+function testFunc () {
+    console.log('test')
+}
 
 //Checks for and removes any old divs before adding new ones
 function removeChildNodes() {
@@ -8,26 +12,6 @@ function removeChildNodes() {
         container.removeChild(container.firstChild)
     }
 }
-    //click button if enter key is pressed
-    input.addEventListener("keypress", (event) => {
-        if(event.key === "Enter") {
-            event.preventDefault();
-            button.click();
-        }
-    })  
-
-    button.addEventListener("click", () => {
-        console.log('test')
-    })
-
-function getInput (input) {
-    let numberInput = +input
-
-    
-
-}
-
-
 
 function createGrid (num) {
 
@@ -43,3 +27,28 @@ function createGrid (num) {
         container.appendChild(div)
     }
 }
+
+ //click button if enter key is pressed
+ input.addEventListener("keypress", (event) => {
+    if(event.key === "Enter") {
+        event.preventDefault();
+        button.click();
+    }
+})  
+
+
+
+button.addEventListener("click", () => {
+    let value = Number(document.getElementById('selection').value)
+    if (value > 100) {
+        alert('Error: Number is too large. Please enter number betwee 1-100')
+    } else {
+    createGrid(value)
+    }
+})
+    
+
+
+
+
+
