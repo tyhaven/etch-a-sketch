@@ -4,11 +4,11 @@
     margin-top: 100px;
     width: 800px;
     height: 800px;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    /* grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr); */
+    border: 1px solid black;
 }
 
 .gridItem {
-    background-color: aquamarine;
-    border: 1px solid white;
+    border: 1px solid black;
 }
