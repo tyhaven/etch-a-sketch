@@ -31,7 +31,7 @@ input {
     border: 1px solid gray;
 }
 
-/* .gridItem:hover {
+.gridItem:hover {
     background-color: gray;
     border: white;
-} */
+}
