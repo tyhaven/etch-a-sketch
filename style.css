@@ -1,10 +1,85 @@
 body {
+    background-color: rgb(39, 39, 39);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-    margin: 40px;
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(39, 39, 39);
+    background-color: rgb(156, 168, 175);
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 21px;
+    transition: .25s;
 }
+
+.small {
+    height: 42px;
+    width: 42px;
+}
+
+.small:hover {
+    transform: scale(1.2);
+    background-color: rgb(184, 199, 208);
+}
+
+.big {
+    height: 64px;
+    width: 450px;
+    border-radius: 32px;
+    background-color: rgb(184, 199, 208);
+}
+
+.colors {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    
+}
+
+.colors.close.shown {
+   background-color: rgb(184, 199, 208);
+}
+
+.colors:hover {
+    transform: translateY(-5px)
+}
+
+.hidden {
+    display: none;
+}
+
+.shown#one {
+    background-color: rgb(219, 0, 0);
+}
+
+.shown#two {
+    background-color: rgb(238, 107, 0);
+}
+
+.shown#three {
+    background-color: rgb(255, 242, 0);
+}
+
+.shown#four {
+    background-color: rgb(7, 213, 0);
+}
+
+.shown#five {
+    background-color: rgb(0, 64, 255);
+}
+
+.shown#six {
+    background-color: rgb(85, 0, 128);
+}
+
+.shown#seven {
+    background-color: black;
+}
+
 
 input {
     text-align: center;
@@ -14,6 +89,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 30px;
 }
 
 #clearBtn {
@@ -27,9 +103,8 @@ input {
     margin-bottom: 100px;
     width: 700px;
     height: 700px;
-    /* grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(20, 1fr); */
     border: 1px solid black;
+    background-color: white;
 }
 
 .gridItem:hover {
@@ -39,5 +114,5 @@ input {
 }
 
 .colored {
-    background-color: aquamarine;
+    background-color: black;
 }

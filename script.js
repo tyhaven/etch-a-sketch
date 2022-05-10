@@ -58,3 +58,15 @@ button.addEventListener("click", () => { // get number input for grid
 
     }
 })
+
+let toolbar = document.querySelector('.toolbar')
+let colors = document.querySelectorAll('.colors')
+toolbar.addEventListener('click', () => {
+    toolbar.classList.toggle('small')
+    toolbar.classList.toggle('big')
+    colors.forEach(div => {
+        div.classList.toggle('hidden')
+        div.classList.toggle('shown')
+    })
+})
+
