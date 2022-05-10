@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch a Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="toolbar small">
+    <!-- <div class="toolbar small">
         <div class="colors hidden" id="one"></div>
         <div class="colors hidden" id="two"></div>
         <div class="colors hidden" id="three"></div>
@@ -19,9 +19,9 @@
         <div class="colors hidden" id="seven"></div>
      <div class="colors hidden close" id="eight">Close</div>
     </div>
-    <div class="rgb" id="idk">
-        <input type="color">
-    </div>
+    <div class="rgb">
+        <input type="color" id="newrgb">
+    </div> -->
 
     <div class="header">
         <div>
@@ -31,8 +31,29 @@
     </div>
 
 
-    <div class="gridContainer">
-        
+    <div class="content">
+        <div class="options">
+            <div class="toolbar small">
+                <div class="colors hidden" id="one"></div>
+                <div class="colors hidden" id="two"></div>
+                <div class="colors hidden" id="three"></div>
+                <div class="colors hidden" id="four"></div>
+                <div class="colors hidden" id="five"></div>
+                <div class="colors hidden" id="six"></div>
+                <div class="colors hidden" id="seven"></div>
+            </div>
+            <div class="rgb">
+                <input type="color" id="newrgb">
+            </div>
+            <div>
+                <button class="column" id="eraser">Eraser</button>
+            </div>
+            <div>
+                <button class="column" id="clear">Clear</button>
+            </div>
+        </div>
+
+        <div class="gridContainer"></div>
     </div>
     
 </body>
