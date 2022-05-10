@@ -23,9 +23,11 @@ function createGrid (num) {
 
 let toolbar = document.querySelector('.toolbar')
 let colors = document.querySelectorAll('.colors')
+let pickedColor = document.querySelector('.pickedColor')
 toolbar.addEventListener('click', () => {
     toolbar.classList.toggle('small')
     toolbar.classList.toggle('big')
+    pickedColor.classList.toggle('hidden')
     getColor()
     colors.forEach(div => {
         div.classList.toggle('hidden')
@@ -91,30 +93,38 @@ let clear = document.getElementById('clear')
 
 one.addEventListener('click', () => {
     color = 'rgb(219, 0, 0)'
+    pickedColor.style.backgroundColor = color
+
 })
 
 two.addEventListener('click', () => {
     color = 'rgb(238, 107, 0)'
+    pickedColor.style.backgroundColor = color
 })
 
 three.addEventListener('click', () => {
     color = 'rgb(255, 242, 0)'
+    pickedColor.style.backgroundColor = color
 })
 
 four.addEventListener('click', () => {
     color = 'rgb(7, 213, 0)'
+    pickedColor.style.backgroundColor = color
 })
 
 five.addEventListener('click', () => {
     color = 'rgb(0, 64, 255)'
+    pickedColor.style.backgroundColor = color
 })
 
 six.addEventListener('click', () => {
     color = 'rgb(85, 0, 128)'
+    pickedColor.style.backgroundColor = color
 })
 
 seven.addEventListener('click', () => {
     color = 'black'
+    pickedColor.style.backgroundColor = color
 })
 
 eight.addEventListener('change', () => {
