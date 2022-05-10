@@ -1,6 +1,7 @@
 let container = document.querySelector('.gridContainer');
 let input = document.getElementById('selection');
 let button = document.getElementById('myBtn');
+let clearBtn = document.getElementById('clearBtn')
 
 function removeChildNodes() { //Checks for and removes any old divs before adding new ones
     while (container.firstChild) {
@@ -20,14 +21,14 @@ function createGrid (num) {
     }
 }
 
-
-
 input.addEventListener("keypress", (event) => {  //click button if enter key is pressed
     if(event.key === "Enter") {
         event.preventDefault();
         button.click();
     }
-})  
+}) 
+
+clickset = false
 
 button.addEventListener("click", () => { // get number input for grid
     let value = Number(document.getElementById('selection').value);
@@ -35,10 +36,21 @@ button.addEventListener("click", () => { // get number input for grid
         alert('Error: Number is too large. Please enter number betwee 1-100');
     } else {
         createGrid(value);
+        let parentDiv = document.querySelector('.gridContainer')
+        parentDiv.addEventListener('mousedown', () => {
+            clickset = true
+        })
+        parentDiv.addEventListener('mouseup', () => {
+            clickset = false
+        })
         let div = Array.from(document.getElementsByName('newName'));
             for (let i = 0; i < div.length; i++) {
                 div[i].addEventListener('mouseover', (event) => {
+                    if (clickset) {
                             div[i].classList.add('colored')
+                    } else {
+                        return
+                    }
                         
              })
              
@@ -46,5 +58,3 @@ button.addEventListener("click", () => { // get number input for grid
 
     }
 })
-
-
